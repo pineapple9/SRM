@@ -45,7 +45,7 @@ public class AccountingIndexController {
 //		model.put("message", this.message);
 		model.put("message", "Accounting");
 
-		System.out.println("Our DataSource is = " + dataSource);
+//		System.out.println("Our DataSource is = " + dataSource);
 
 		return "accounting/indexAccounting";
 	}

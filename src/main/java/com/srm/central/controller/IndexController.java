@@ -39,7 +39,7 @@ public class IndexController implements ErrorController {
 //		model.put("message", this.message);
 		model.put("message", "Central Index");
 
-		System.out.println("Our DataSource is = " + dataSource);
+//		System.out.println("Our DataSource is = " + dataSource);
 
 		return "central/index";
 	}

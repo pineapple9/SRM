@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
 <html lang="en">
 <head>
 
-<link rel="stylesheet" type="text/css"
-	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<!--<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />-->
 
-<!-- 
-	<spring:url value="/css/main.css" var="springCss" />
-	<link href="${springCss}" rel="stylesheet" />
-	 -->
-<c:url value="/css/main.css" var="jstlCss" />
-<link href="${jstlCss}" rel="stylesheet" />
+	<spring:url value="/css/signin.css" var="springSignInCss" />
+	<link href="${springSignInCss}" rel="stylesheet" />
+
+    <spring:url value="/css/bootstrap/bootstrap.min.css" var="springBootstrapCss" />
+    <link href="${springBootstrapCss}" rel="stylesheet" />
+
+	<%--<!--<c:url value="/css/main.css" var="jstlCss" />-->--%>
+	<%--<!--<link href="${jstlCss}" rel="stylesheet" />-->--%>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <!--<link href="../../../../resources/static/css/signin.css" rel="stylesheet">-->
 
 </head>
-<body>
 
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Spring Boot</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<div class="container">
-
-		<div class="starter-template">
-			<h1>SRM (System Resource Management)</h1>
-			<h2>Message: ${message}</h2>
-		</div>
-
-
-
-	</div>
-	<!-- /.container -->
-
-	<script type="text/javascript"
-		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-</body>
+    <body class="text-center">
+        <form class="form-signin">
+            <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+        </form>
+    </body>
 
 </html>
